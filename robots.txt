@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ihsanfathin.vercel.app/sitemap.xml

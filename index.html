@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ihsan Fathin Hidayah | Pembuat firmware dan perangkat ESP32</title>
+<meta name="description" content="Portofolio Ihsan Fathin Hidayah, siswa SMA di Payakumbuh yang membuat firmware dan perangkat ESP32, termasuk Accretion Phone dengan sistem operasi NyxOS.">
+<link rel="canonical" href="https://ihsanfathin.vercel.app/">
+<meta property="og:title" content="Ihsan Fathin Hidayah | Pembuat firmware dan perangkat ESP32"><meta property="og:type" content="website">
+<!-- Search Console: tempel meta google-site-verification di sini -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--mint:#E4ECE7;--ink:#10231B;--coral:#FF4D6D;--lime:#DDF05A;--sky:#8EC5FF;--jade:#8FE0BE;--soft:#46594F;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mint);color:var(--ink);font:1.0625rem/1.65 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.top,.n,button{font-family:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif}
+h1,h2,h3{margin:0;font-weight:700}
+a{color:inherit;text-decoration-color:var(--coral);text-decoration-thickness:2px;text-underline-offset:.2em}a:hover{text-decoration-thickness:5px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+.top{display:flex;justify-content:space-between;padding:1.25rem 0;font-weight:600}.top nav a{margin-left:1.25rem}
+.hero{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;padding:1.5rem 0 5rem}
+.hero h1{font-size:clamp(3.6rem,11vw,9rem);line-height:.86;letter-spacing:-.045em}
+.lede{max-width:28rem;font-size:1.3rem;margin:2rem 0 1rem}
+.hint{max-width:28rem;color:var(--soft);margin:0}
+.phone{width:19.5rem;height:36rem;background:var(--ink);border-radius:2.6rem;padding:.6rem;box-shadow:0 1px 0 #000,.9rem .9rem 0 #B3C7BA;transform:rotate(2deg)}
+.screen{position:relative;height:100%;background:#173528;border-radius:2.1rem;overflow:hidden;color:#fff;display:flex;flex-direction:column;padding:.9rem 1rem 1rem}
+.status{display:flex;justify-content:space-between;font:600 .8rem "Familjen Grotesk",Arial,sans-serif;padding:0 .4rem}
+.widgets{display:grid;grid-template-columns:1.25fr 1fr;gap:.6rem;margin:1.1rem 0 1.2rem}
+.w{border-radius:1.2rem;padding:.8rem .9rem;color:var(--ink);min-height:6.6rem;display:flex;flex-direction:column;justify-content:space-between;font-size:.8rem;line-height:1.25}
+.w b{font:700 2.1rem/1 "Familjen Grotesk",Arial,sans-serif;letter-spacing:-.03em;display:block}
+.w1{background:var(--mint)}.w2{background:var(--coral);border-radius:1.2rem 1.2rem 1.2rem .3rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem .4rem}
+.ic{background:none;border:0;color:#fff;font-size:.68rem;display:flex;flex-direction:column;align-items:center;gap:.35rem;cursor:pointer;text-decoration:none;padding:0;animation:pop .45s cubic-bezier(.3,1.4,.5,1) both;animation-delay:calc(var(--i)*55ms + .2s)}
+.ic i{font:700 1.15rem "Familjen Grotesk",Arial,sans-serif;font-style:normal;width:3.3rem;height:3.3rem;border-radius:1.1rem;display:grid;place-items:center;color:var(--ink);transition:transform .15s}
+.ic:active i{transform:scale(.92)}
+@keyframes pop{from{transform:scale(.4);opacity:0}}
+@media(prefers-reduced-motion:reduce){.ic{animation:none}.sheet{transition:none!important}}
+.sheet{position:absolute;inset:2.4rem 0 0;background:var(--mint);color:var(--ink);border-radius:1.6rem 1.6rem 0 0;padding:1.2rem 1.1rem 4rem;overflow:auto;transform:translateY(105%);visibility:hidden;transition:transform .32s cubic-bezier(.3,.8,.2,1),visibility 0s .32s;font-size:.9rem;line-height:1.5}
+.sheet.open{transform:none;visibility:visible;transition-delay:0s}
+.sheet h2,.sheet h3{font-size:1.5rem;letter-spacing:-.02em;margin-bottom:.3rem}
+.sheet .n{font-size:3.4rem;margin:0}.sheet p{margin:.5rem 0}.sheet .hw{color:var(--soft)}
+.home{position:absolute;left:50%;bottom:.55rem;transform:translateX(-50%);width:7rem;height:1.6rem;background:none;border:0;cursor:pointer}
+.home::after{content:"";display:block;margin:.5rem auto 0;width:5.4rem;height:.28rem;border-radius:9px;background:#fff}
+.sheet.open~.home::after{background:var(--ink)}
+section{padding:3.5rem 0}
+h2.t{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.03em;margin-bottom:2.5rem}
+.app{display:grid;grid-template-columns:9rem 1fr 1.4fr;gap:.5rem 2.5rem;padding:1.5rem 0 2rem}
+.app .n{font-weight:700;font-size:4.2rem;line-height:.9;letter-spacing:-.05em}
+.app h3{font-size:1.6rem}.app .hw{color:var(--soft);margin:.25rem 0 0;font-size:.95rem}
+.app p{margin:0}.app .main h3{font-size:2.2rem}
+.app.lead h3{font-size:2.3rem}
+.abt{max-width:40rem}.abt .big{font:700 clamp(1.5rem,3vw,2.1rem)/1.2 "Familjen Grotesk",Arial,sans-serif;letter-spacing:-.02em;margin:0 0 1rem}
+.abt p{margin:0 0 1rem}
+.abt h2{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.03em;margin-bottom:1.5rem}
+.sheet .abt h2{font-size:1.5rem;margin-bottom:.5rem}.sheet .abt .big{font-size:1.15rem}
+.sheet .app{display:block;padding:0}.sheet .app .n{font-size:3.2rem}.sheet .app h3,.sheet .app.lead h3{font-size:1.4rem}
+
+.contact a{font:700 clamp(1.4rem,4.2vw,3rem)/1.1 "Familjen Grotesk",Arial,sans-serif;letter-spacing:-.03em;word-break:break-all}
+footer{padding:2rem 0 3rem;color:var(--soft);font-size:.95rem}
+.page{max-width:44rem;padding:1rem 0 2rem}.page h1{font-size:clamp(2.8rem,8vw,5.5rem);line-height:.92;letter-spacing:-.045em;margin-bottom:1.5rem}
+.page h2{font-size:1.9rem;margin:2.5rem 0 .75rem}.page table{border-collapse:collapse;width:100%}
+.page th,.page td{text-align:left;padding:.6rem .75rem .6rem 0;vertical-align:top;border-top:1px solid #B7C6BD}.page th{width:10rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:2.5rem}.phone{justify-self:center;margin-bottom:1rem}.app{grid-template-columns:1fr}.app .n{font-size:3rem}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ihsan Fathin Hidayah","url":"https://ihsanfathin.vercel.app/","description":"Siswa SMA yang membuat firmware dan perangkat berbasis ESP32.","address":{"@type":"PostalAddress","addressLocality":"Payakumbuh","addressCountry":"ID"},"sameAs":["https://github.com/silentproject2025"]}</script>
+</head>
+<body>
+<noscript><style>.phone{display:none}</style></noscript>
+<div class="wrap">
+<header class="top"><span>Ihsan Fathin Hidayah</span><nav><a href="#proyek">Proyek</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></nav></header>
+<div class="hero"><div>
+<h1>Ihsan<br>Fathin<br>Hidayah</h1>
+<p class="lede">Saya siswa SMA di Payakumbuh. Saya menulis firmware dan merakit perangkat ESP32 sendiri, termasuk sebuah HP dengan sistem operasi yang ditulis dari nol.</p>
+<p class="hint">HP di sebelah ini bisa ditekan. Setiap ikon membuka satu proyek saya.</p>
+</div>
+<div class="phone" role="group" aria-label="Simulasi layar utama NyxOS"><div class="screen">
+<div class="status"><span id="clk">--.--</span><span>NyxOS 1.0.3</span></div>
+<div class="widgets"><div class="w w1"><b id="clk2"></b><span id="dt">Payakumbuh</span></div><div class="w w2"><b>46</b><span>aplikasi bawaan di satu ESP32-S3</span></div></div>
+<div class="grid" id="grid"></div>
+<div class="sheet" id="sheet" aria-live="polite"><div id="sbody"></div></div>
+<button class="home" id="home" aria-label="Kembali ke layar utama"></button>
+</div></div>
+</div>
+<main>
+<section id="proyek"><h2 class="t">Proyek</h2>
+<article class="app lead" data-ic="Ac" data-label="Accretion" data-color="#FF4D6D"><span class="n">46</span><div><h3>Accretion Phone dan NyxOS</h3><p class="hw">ESP32-S3, versi 1.0.3, AGPL-3.0</p></div><p>Aplikasi bawaan di smartphone rakitan dengan OS buatan sendiri. Launcher, pusat notifikasi, network stack, emulator, pemutar media, bahkan mesin grafisnya adalah kode sendiri, sekitar 65.000 baris. <a href="accretion-phone.html">Baca detailnya</a> atau lihat <a href="https://github.com/silentproject2025/ren_phone">kodenya di GitHub</a>.</p></article>
+<article class="app " data-ic="Sz" data-label="SANZXCAM" data-color="#E4ECE7"><span class="n">3</span><div><h3>SANZXCAM v6.1</h3><p class="hw">ESP32-S3, MPU6050</p></div><p>Eksposur untuk satu foto HDR. Kamera ini juga menganalisis gambar lewat Gemini dan menyisipkan data tersembunyi di setiap JPEG dan BMP.</p></article>
+<article class="app " data-ic="Mh" data-label="Media Hub" data-color="#C9D8CF"><span class="n">9</span><div><h3>Media Hub v9.1</h3><p class="hw">ESP32-S3, layar ST7789 320x170</p></div><p>Game di satu perangkat genggam, bersama chat AI, pemutar video MJPEG, dan pelacak ISS.</p></article>
+<article class="app " data-ic="C3" data-label="C3 Ultra" data-color="#A9BEB0"><span class="n">5</span><div><h3>ESP32-C3 Ultra Edition</h3><p class="hw">ESP32-C3 SuperMini, OLED 128x64</p></div><p>Peer yang bisa saling kirim pesan lewat ESP-NOW tanpa internet. Ada juga pemantau baterai yang menghitung laju pengosongan dan mendeteksi kebocoran daya. <a href="https://github.com/sanzxprojectid/AI-pocket">Kode</a></p></article>
+<article class="app " data-ic="Rn" data-label="Musik" data-color="#DCE7E0"><span class="n">8</span><div><h3>Bluetooth music player</h3><p class="hw">ESP32, OLED, mesin RYNE v1.4.0</p></div><p>Vibe yang dikenali pemutar ini dari pola skip dan volume, lalu dipakai algoritma RYNE-CRS buatan sendiri untuk memilih lagu berikutnya. Wajahnya berubah ekspresi di OLED.</p></article>
+</section>
+<section id="tentang"><div class="abt" data-ic="Tt" data-label="Tentang" data-color="#E4ECE7">
+<h2>Tentang</h2>
+<p class="big">Mulai dari satu layar kecil dan satu tombol, terus bertambah sampai perangkatnya butuh sistem operasi sendiri.</p>
+<p>Di README Accretion Phone saya mencatat fitur mana yang sudah diuji di perangkat dan mana yang belum. Panggilan telepon misalnya baru terverifikasi dengan satu akun SIP. Menurut saya itu bagian dari kerjanya, bukan kekurangan yang disembunyikan.</p>
+</div></section>
+<section id="kontak" class="contact"><h2 class="t">Kontak</h2>
+<a href="mailto:support.accretion@gmail.com">support.accretion@gmail.com</a>
+<p><a href="https://github.com/silentproject2025">github.com/silentproject2025</a></p></section>
+</main>
+<footer>Ihsan Fathin Hidayah, Payakumbuh. Jam di HP mengikuti waktu Payakumbuh.</footer>
+</div>
+<script>
+(function(){
+var apps=[].slice.call(document.querySelectorAll('.app,.abt'));
+var grid=document.getElementById('grid'),sheet=document.getElementById('sheet'),body=document.getElementById('sbody'),home=document.getElementById('home');
+function open(el){body.innerHTML='';body.appendChild(el.cloneNode(true));sheet.classList.add('open');sheet.scrollTop=0;home.focus();}
+function close(){sheet.classList.remove('open');}
+var i=0;
+apps.forEach(function(el){var b=document.createElement('button');b.className='ic';b.style.setProperty('--i',i++);b.innerHTML='<i style="background:'+el.dataset.color+'">'+el.dataset.ic+'</i>'+el.dataset.label;b.onclick=function(){open(el)};grid.appendChild(b);});
+[['@','Email','#E4ECE7','mailto:support.accretion@gmail.com'],['Gh','GitHub','#E4ECE7','https://github.com/silentproject2025']].forEach(function(x){var a=document.createElement('a');a.className='ic';a.style.setProperty('--i',i++);a.href=x[3];a.innerHTML='<i style="background:'+x[2]+'">'+x[0]+'</i>'+x[1];grid.appendChild(a);});
+home.onclick=close;document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+function tick(){var d=new Date(),z='Asia/Jakarta';document.getElementById('clk2').textContent=document.getElementById('clk').textContent=d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit',timeZone:z});document.getElementById('dt').textContent=d.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',timeZone:z});}
+tick();setInterval(tick,20000);
+})();
+</script>
+</body>
+</html>
